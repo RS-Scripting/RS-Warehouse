@@ -12,6 +12,5 @@
 - [Chest-Deposit](02%29%20Depositing%20Items/B%29%20Warehouse%20Chest%20Deposit.md)
 - [Deposit Command](02%29%20Depositing%20Items/C%29%20Shop%20Deposit%20Command.md)
 
-
-
-
+### Item Options
+- [Item Option Menu](03%29%Item%20Item%20Options/A%29%20Item%20Option%20Menu.md)
