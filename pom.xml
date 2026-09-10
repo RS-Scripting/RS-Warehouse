@@ -1,0 +1,122 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.rsscripting</groupId>
+    <artifactId>RS-Warehouse</artifactId>
+    <name>RS-Warehouse</name>
+    <version>1.5.1</version>
+
+    <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <resources>
+
+            <!-- Normal resources that need filtering -->
+            <resource>
+
+                <directory>src/main/resources</directory>
+
+                <filtering>true</filtering>
+
+                <excludes>
+
+                    <exclude>
+                        database.db
+                    </exclude>
+
+                    <exclude>
+                        db-files-templates/*.db
+                    </exclude>
+
+                </excludes>
+
+            </resource>
+
+            <!-- Main database copied as binary -->
+            <resource>
+
+                <directory>src/main/resources</directory>
+
+                <filtering>false</filtering>
+
+                <includes>
+
+                    <include>
+                        database.db
+                    </include>
+
+                </includes>
+
+            </resource>
+
+            <!-- Database template files copied as binary -->
+            <resource>
+
+                <directory>
+                    src/main/resources/db-files-templates
+                </directory>
+
+                <targetPath>
+                    db-files-templates
+                </targetPath>
+
+                <filtering>false</filtering>
+
+                <includes>
+
+                    <include>
+                        *.db
+                    </include>
+
+                </includes>
+
+            </resource>
+
+        </resources>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>papermc-repo</id>
+            <url>https://repo.papermc.io/repository/maven-public/</url>
+        </repository>
+        <repository>
+            <id>codemc-repo</id>
+            <url>https://repo.codemc.io/repository/maven-public/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>io.papermc.paper</groupId>
+            <artifactId>paper-api</artifactId>
+            <version>1.21.6-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.xerial</groupId>
+            <artifactId>sqlite-jdbc</artifactId>
+            <version>3.50.3.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.wesjd</groupId>
+            <artifactId>anvilgui</artifactId>
+            <version>1.10.10-SNAPSHOT</version>
+        </dependency>
+
+    </dependencies>
+
+
+
+</project>
