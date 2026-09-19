@@ -8,7 +8,7 @@
     <groupId>com.rsscripting</groupId>
     <artifactId>RS-Warehouse</artifactId>
     <name>RS-Warehouse</name>
-    <version>1.5.1</version>
+    <version>1.6.0</version>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
